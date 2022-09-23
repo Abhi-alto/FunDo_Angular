@@ -1,0 +1,172 @@
+.OuterDiv
+{
+    display:flex;
+    justify-content:center;
+    align-items:center ;
+    width:97vw;
+    height: 97vh;
+    font-family: sans-serif;
+}
+.InnerDiv
+{
+    display:flex;
+    flex-direction: row;
+    border: 1px solid rgb(220, 207, 207);
+    border-radius: 10px;
+    width:50%;
+    height: 75%;
+    padding: 45px 45px 23px 40px;
+}
+
+.Details
+{
+    display:flex;
+    flex-direction: row;
+    width: 50%;
+    font-size: small;
+    padding-bottom: 10px;
+}
+.Company
+{
+    font-size:x-large;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding-bottom: 15px;
+}
+.Company span:nth-child(10n + 1)
+{
+    color:#1a73e8;
+}
+.Company span:nth-child(10n + 2)
+{
+    color:red;
+}
+.Company span:nth-child(10n + 3)
+{
+    color:gold;
+}
+.Company span:nth-child(10n + 4)
+{
+    color:#1a73e8;
+}
+.Company span:nth-child(10n + 5)
+{
+    color:red;
+}
+.Company span:nth-child(10n + 6)
+{
+    color:rgb(255, 255, 255);
+}
+.Company span:nth-child(10n + 7)
+{
+    color:#1a73e8;
+}
+.Company span:nth-child(10n + 8)
+{
+    color:red;
+}
+.Company span:nth-child(10n + 9)
+{
+    color:gold;
+}
+.Company span:nth-child(10n + 10)
+{
+    color:red;
+}
+.Company span:nth-child(10n + 11)
+{
+    color:rgb(22, 157, 22);
+}
+.FName
+{
+    padding-right: 10px;
+}
+.email
+{
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    .mat-form-field
+    {
+        height: 50px;
+    }
+}
+.hint
+{
+    padding-top:2px;
+    padding-left: 12px;
+    font-size: smaller;
+    padding-bottom: 10px;
+    color: rgb(122, 116, 116);
+}
+.Password
+{
+    display: flex;
+    padding-bottom: 20px;;
+    font-size: small;
+    padding-right: 10px;
+}
+.header
+{
+    font-size: x-large;
+    padding:15px 0px 40px;
+}
+.PContainer
+{
+    display:flex;
+    flex-direction: row;
+    width: 50%;
+    font-size: small;
+    height:50px
+}
+.Image
+{
+    display:flex;
+    justify-content:center;
+   padding-left: 50px;
+   padding-top: 20%;
+ 
+}
+.bottom
+{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 60px;
+}
+.Right
+{
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+}
+.mat-form-field
+{
+    color: #1a73e8;
+    width:100%;
+}
+.txt
+{
+    display:flex;
+    justify-content:center;
+     padding-left: 60px;
+     padding-top: 10px;
+     padding-right: 20px;
+    align-items: center;
+    font-size: large;
+    font-weight:lighter;
+}
+.mat-button
+{
+    padding-left: 0px;
+    color: var(--gm-colortextbutton-ink-color,#1a73e8);
+}
+.CEmail
+{
+    padding-bottom: 30px;
+}
+.Register button{
+    background-color: #1a73e8;
+    color: white;
+    width: 100px;
+}
