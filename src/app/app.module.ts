@@ -9,15 +9,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
-import { ForgotEmailComponent } from './Components/forgot-email/forgot-email.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
+import { ForgotPasswordComponent } from './Components/forgot-password/forgot-password.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ForgotEmailComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
