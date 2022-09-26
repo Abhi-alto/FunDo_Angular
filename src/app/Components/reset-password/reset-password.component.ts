@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reset-password',
@@ -6,10 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reset-password.component.scss']
 })
 export class ResetPasswordComponent implements OnInit {
+  resetPasswordForm !: FormGroup;
 
-  constructor() { }
+  constructor(private fb:FormBuilder) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void
+  {
+      this.resetPasswordForm=this.fb.group(
+      {
+         Password:['',Validators.required,Validators.minLength(8)],
+        CPassword:['',Validators.required]
+      })
+  }
+  onSubmit()
+  {
+    if(this.resetPasswordForm.valid)
+    {
+      console.log("valid data",this.resetPasswordForm.value);
+      console.log("do api call");
+    }
+    else
+    {
+      console.log("invalid data",this.resetPasswordForm.value);
+      console.log("no api call");
+    }
   }
 
 }

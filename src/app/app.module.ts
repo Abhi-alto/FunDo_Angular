@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './Components/forgot-password/forgot-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { ForgotPasswordComponent } from './Components/forgot-password/forgot-pas
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     BrowserAnimationsModule,

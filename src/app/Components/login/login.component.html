@@ -1,46 +1,50 @@
 <div class="OuterDiv">
     <div class="InnerDiv" >
-        <div class="Company">
-            <Span>F</Span>
-            <Span>u</Span>
-            <Span>n</Span>
-            <Span>d</Span>
-            <Span>o</Span>
-            <Span>_</Span>
-            <Span>N</Span>
-            <Span>o</Span>
-            <Span>t</Span>
-            <Span>e</Span>
-            <Span>s</Span>
-        </div>
-        <div class="Login">Sign in</div>
-        <div class="AccountUse">Use your Fundo Note Account</div>
-        <div class="email">
-            <mat-form-field appearance="outline">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder=""s>
-            </mat-form-field>
-        </div>
-        <div class="Password">
-            <mat-form-field appearance="outline">
-                <mat-label>Password</mat-label>
-                <input matInput placeholder=""s>
-            </mat-form-field>
-        </div>
-        <div class="ForgotPassword">
-            <button mat-flat-button  routerLink="/forgetPassword" self="_blank">Forgot password ?</button>
-        </div>
-        <div class="Msg">Not your computer? Use Guest mode to sign in privately.</div>
-        <div class="Link">
-            <button mat-flat-button href="https://www.google.com/">Learn More</button>
-        </div>
-        <div class="bottomContainer">
-            <div class="Create">
-                <a mat-button routerLink="/signup" self="_blank">Create Account</a>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="Company">
+                <Span>F</Span>
+                <Span>u</Span>
+                <Span>n</Span>
+                <Span>d</Span>
+                <Span>o</Span>
+                <Span>_</Span>
+                <Span>N</Span>
+                <Span>o</Span>
+                <Span>t</Span>
+                <Span>e</Span>
+                <Span>s</Span>
             </div>
-            <div class="Next">
-                <button mat-flat-button >Next</button>
+            <div class="Login">Sign in</div>
+            <div class="AccountUse">Use your Fundo Note Account</div>
+            <div class="email">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="placeholder" formControlName="email">
+                    <mat-error>Enter correct email</mat-error>
+                </mat-form-field>
             </div>
-        </div>
+            <div class="Password">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="placeholder" formControlName="Password">
+                    <mat-error>Enter correct password</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="ForgotPassword">
+                <button mat-flat-button  routerLink="/forgetPassword" self="_blank">Forgot password ?</button>
+            </div>
+            <div class="Msg">Not your computer? Use Guest mode to sign in privately.</div>
+            <div class="Link">
+                <button mat-flat-button href="https://www.google.com/">Learn More</button>
+            </div>
+            <div class="bottomContainer">
+                <div class="Create">
+                    <a mat-button routerLink="/signup" self="_blank">Create Account</a>
+                </div>
+                <div class="Next">
+                    <button mat-flat-button >Next</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>

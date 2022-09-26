@@ -1,76 +1,84 @@
 <div class="OuterDiv">
    <div class="InnerDiv" >
-            <div class="Left">
-                <div class="Company">
-                    <Span>F</Span>
-                    <Span>u</Span>
-                    <Span>n</Span>
-                    <Span>d</Span>
-                    <Span>o</Span>
-                    <Span>_</Span>
-                    <Span>N</Span>
-                    <Span>o</Span>
-                    <Span>t</Span>
-                    <Span>e</Span>
-                    <Span>s</Span>
-                </div>
-                <div class="header">Create your Fundo Note Account </div>
-                <div class="Details" >
-                        <div class="FName" >
-                            <mat-form-field appearance="outline">
-                                <mat-label>First Name</mat-label>
-                                <input matInput placeholder="Placeholder">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="Left">
+                    <div class="Company">
+                        <Span>F</Span>
+                        <Span>u</Span>
+                        <Span>n</Span>
+                        <Span>d</Span>
+                        <Span>o</Span>
+                        <Span>_</Span>
+                        <Span>N</Span>
+                        <Span>o</Span>
+                        <Span>t</Span>
+                        <Span>e</Span>
+                        <Span>s</Span>
+                    </div>
+                    <div class="header">Create your Fundo Note Account </div>
+                    <div class="Details" >
+                            <div class="FName" >
+                                <mat-form-field appearance="outline">
+                                    <mat-label>First Name</mat-label>
+                                    <input matInput placeholder="Placeholder" formControlName="firstName">
+                                    <mat-error>Enter First Name</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="LName" >
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Last Name</mat-label>
+                                    <input matInput placeholder="placeholder" formControlName="lastName">
+                                    <mat-error>Enter Last Name</mat-error>
+                                </mat-form-field>
+                            </div> 
+                    </div>
+
+                    <div class="email">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input matInput placeholder="Placeholder" formControlName="email">
+                            <mat-error>Enter Email</mat-error>
+                        </mat-form-field>
+                        <div class="hint">You can use letters , numbers and periods</div>
+                    </div>
+
+                    <div class="CEmail">
+                        <a mat-button>Use my current email address instead</a>
+                    </div>
+
+                    <div class="PContainer">
+                        <div class="Password">
+                            <mat-form-field appearance="outline"v>
+                                <mat-label>Password</mat-label>
+                                <input matInput placeholder="Placeholder"formControlName="Password">
+                                <mat-error>Enter Password</mat-error>
                             </mat-form-field>
                         </div>
-                        <div class="LName" >
-                            <mat-form-field appearance="outline">
-                                <mat-label>Last Name</mat-label>
-                                <input matInput placeholder="placeholder">
+                        <div class="CPassword">
+                            <mat-form-field appearance="outline"v>
+                                <mat-label>Confirm Password</mat-label>
+                                <input matInput placeholder="Placeholder"formControlName="CPassword">
+                                <mat-error>Enter password again</mat-error>
                             </mat-form-field>
-                        </div> 
-                </div>
-
-                <div class="email">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Username</mat-label>
-                        <input matInput placeholder="Placeholder">
-                    </mat-form-field>
-                    <div class="hint">You can use letters , numbers and periods</div>
-                </div>
-
-                <div class="CEmail">
-                    <a mat-button>Use my current email address instead</a>
-                </div>
-
-                <div class="PContainer">
-                    <div class="Password">
-                        <mat-form-field appearance="outline"v>
-                            <mat-label>Password</mat-label>
-                            <input matInput placeholder="Placeholder">
-                        </mat-form-field>
+                        </div>
                     </div>
-                    <div class="CPassword">
-                        <mat-form-field appearance="outline"v>
-                            <mat-label>Confirm Password</mat-label>
-                            <input matInput placeholder="Placeholder">
-                        </mat-form-field>
+
+                    <div class="hint">Use 8 or more characters with a mix of letters, numbers & symbols</div>
+                    <div class="Checkbox">
+                        <input type="checkbox">
+                        <label>     Show Password</label>
+                    </div>
+                    <div class="bottom">
+                        <div class="Login">
+                            <a mat-button routerLink="/login" target="_self">Sign in instead</a>
+                        </div>
+                        <div class="Register">
+                            <button mat-flat-button >Next</button>
+                        </div>
                     </div>
                 </div>
+            </form>
 
-                <div class="hint">Use 8 or more characters with a mix of letters, numbers & symbols</div>
-                <div class="Checkbox">
-                    <input type="checkbox">
-                    <label>     Show Password</label>
-                </div>
-                <div class="bottom">
-                    <div class="Login">
-                        <a mat-button routerLink="/login" target="_self">Sign in instead</a>
-                    </div>
-                    <div class="Register">
-                        <button mat-flat-button >Next</button>
-                    </div>
-                </div>
-            </div>
             <div class="Right">
                 <div class="Image" >
                     <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" srcset="" width="100%">
