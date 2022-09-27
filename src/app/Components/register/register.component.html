@@ -37,7 +37,6 @@
                         <mat-form-field appearance="outline">
                             <mat-label>Username</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="email">
-                            <mat-error>Enter Email</mat-error>
                         </mat-form-field>
                         <div class="hint">You can use letters , numbers and periods</div>
                     </div>
@@ -51,14 +50,12 @@
                             <mat-form-field appearance="outline"v>
                                 <mat-label>Password</mat-label>
                                 <input matInput placeholder="Placeholder"formControlName="Password">
-                                <mat-error>Enter Password</mat-error>
                             </mat-form-field>
                         </div>
                         <div class="CPassword">
                             <mat-form-field appearance="outline"v>
                                 <mat-label>Confirm Password</mat-label>
                                 <input matInput placeholder="Placeholder"formControlName="CPassword">
-                                <mat-error>Enter password again</mat-error>
                             </mat-form-field>
                         </div>
                     </div>
@@ -73,7 +70,7 @@
                             <a mat-button routerLink="/login" target="_self">Sign in instead</a>
                         </div>
                         <div class="Register">
-                            <button mat-flat-button >Next</button>
+                            <button mat-flat-button routerLink="/dashboard" >Next</button>
                         </div>
                     </div>
                 </div>
@@ -83,7 +80,8 @@
                 <div class="Image" >
                     <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" srcset="" width="100%">
                 </div>
-                <div class="txt">All of Fundo working for you.</div>
+                <div class="txt"><p>One Account. All of Fundo </p></div>
+                              <div class="txt1"><p> working for you.</p></div>
             </div>
     </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/Services/userService/user.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,13 +9,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   loginForm !: FormGroup;
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,private user:UserService) { }
 
   ngOnInit(): void
   {
       this.loginForm=this.fb.group(
       {
-        email:['',Validators.required,Validators.email],
+        email: ['', [Validators.required, Validators.email]],
         Password:['',Validators.required]
       })
   }
@@ -24,7 +25,18 @@ export class LoginComponent implements OnInit {
     {
       console.log("valid data",this.loginForm.value);
       console.log("do api call");
+      let data=
+      {
+        email: this.loginForm.value.email,
+        password: this.loginForm.value.Password
+      }
+      this.user.login(data).subscribe((result:any)=>
+      {
+          console.log(result.token)
+          localStorage.setItem('token' , result.token)
+      })
     }
+    
     else
     {
       console.log("invalid data",this.loginForm.value);

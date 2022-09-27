@@ -142,7 +142,7 @@
 }
 .mat-form-field
 {
-    color: #1a73e8;
+    //color: #1a73e8;
     width:100%;
 }
 .txt
@@ -150,12 +150,25 @@
     display:flex;
     justify-content:center;
      padding-left: 60px;
-     padding-top: 10px;
+     font-family: sans-serif;
+    // padding-top: 10px;
      padding-right: 20px;
     align-items: center;
     font-size: large;
     font-weight:lighter;
-    opacity: 0.5;
+    opacity: 0.8;
+}
+.txt1
+{
+    display:flex;
+    justify-content:center;
+     padding-left: 60px;
+     font-family: sans-serif;
+     padding-right: 20px;
+    align-items: center;
+    font-size: large;
+    font-weight:lighter;
+    opacity: 0.8;
 }
 .mat-button
 {
