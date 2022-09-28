@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-note.component.scss']
 })
 export class CreateNoteComponent implements OnInit {
+  isShow=false;
+  title:any;
+  description:any;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  show()
+  {
+    this.isShow=true;
+  }
+  close()
+  {
+    this.isShow=false;
   }
 
 }

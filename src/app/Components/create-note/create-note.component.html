@@ -1,1 +1,16 @@
-<p>create-note works!</p>
+<div class="Outer">
+    <div class="createNote">
+        <div *ngIf="isShow">
+            <input class="Title" autocomplete="off" placeholder="Title" role="combobox" value=""
+                name="q" type="text">
+        </div>
+        <div *ngIf="!isShow || isShow" (click)="show()">
+            <input class="TakeNote" autocomplete="off" placeholder="Take a Note" role="combobox"
+                value="" name="q" type="text">
+        </div>
+        <div class="boxicon" *ngIf="isShow">
+            <app-icons></app-icons>
+            <button (click)="close()">close</button>
+        </div>
+    </div>
+</div>

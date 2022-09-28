@@ -1,0 +1,19 @@
+.OuterDiv
+{
+    border:1px solid purple;
+}
+.getallnotes
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+.createNote
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid green;
+}

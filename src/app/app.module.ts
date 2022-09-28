@@ -25,6 +25,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ArchiveComponent } from './Components/archive/archive.component';
 import { TrashComponent } from './Components/trash/trash.component';
+import { ReminderComponent } from './Components/reminder/reminder.component';
+import { EditLabelsComponent } from './Components/edit-labels/edit-labels.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,9 @@ import { TrashComponent } from './Components/trash/trash.component';
     DisplayNoteComponent,
     IconsComponent,
     ArchiveComponent,
-    TrashComponent
+    TrashComponent,
+    ReminderComponent,
+    EditLabelsComponent
   ],
   imports: [
     BrowserModule,
