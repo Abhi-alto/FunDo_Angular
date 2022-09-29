@@ -1,16 +1,19 @@
 <div class="Outer">
     <div class="createNote">
         <div *ngIf="isShow">
-            <input class="Title" autocomplete="off" placeholder="Title" role="combobox" value=""
+            <input class="Title" autocomplete="off" placeholder="Title"[(ngModel)]="title" role="combobox" value=""
                 name="q" type="text">
+            <button mat-icon-button  aria-label="New List">
+                    <mat-icon href="S:/Abhishek's Project/AngularProject/FunDoNotes/src/assets/"></mat-icon>
+                  </button> 
         </div>
         <div *ngIf="!isShow || isShow" (click)="show()">
-            <input class="TakeNote" autocomplete="off" placeholder="Take a Note" role="combobox"
+            <input class="TakeNote" autocomplete="off" placeholder="Take a Note"[(ngModel)]="description" role="combobox"
                 value="" name="q" type="text">
         </div>
         <div class="boxicon" *ngIf="isShow">
             <app-icons></app-icons>
-            <button (click)="close()">close</button>
+            <button mat-button (click)="close()">Close</button>
         </div>
     </div>
 </div>

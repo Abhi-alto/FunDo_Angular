@@ -18,7 +18,7 @@ export class HttpService {
   }
   getService(url:string, token:boolean=false, httpOptions:any)
   {
-    return this.httpclient.post(url, token && httpOptions)
+    return this.httpclient.get(url, token && httpOptions)
   }
   deleteService()
   {

@@ -112,10 +112,14 @@
   align-items: center;
   justify-content: right;
   padding-left:200px;
-  width: 600px;  
-  color: rgb(135, 129, 129) ;
+  width: 600px; 
   .list
   {
     padding-left: 30px;
   }
+}
+.mat-list-item
+{
+  cursor:pointer;
+  border-radius: 0px 25px 25px 0px;
 }
