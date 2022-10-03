@@ -3,7 +3,7 @@
     width:100%;
 }
 
-    input
+input
     {
         width:500px ;
         height:40px;
@@ -13,8 +13,53 @@
         font-size: 15px;
     }
 .boxicon
+    {
+        width:100%;
+        height:50px;
+        display:flex;
+        justify-content:space-between;
+
+}
+.createNote
 {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    border:2px solid rgb(255, 255, 255);
+    box-shadow:1px 1px 6px 0.8px grey;
+    border-radius: 10px;
+    padding:1px;
+    width:760px;
+    padding-right: 15px;
+    .ShowBox
+    {
+        width:48vw;
+    }
+    .TakeNote
+    {
+        width:41vw;
+    }
+}
+
+
+
+.mat-icon-button:hover
+{
+    background-color: rgb(238, 241, 241);
+    width:42px;
+    height:42px;
+}
+.notShow
+{
+    display: flex;
+}
+.image
+{
+    display: flex;
     justify-content: space-between;
+    width:100px;
+}
+.mat-icon
+{
+    color: aqua;
 }

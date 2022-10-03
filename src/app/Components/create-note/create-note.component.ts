@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NoteService } from 'src/app/Services/noteService/note.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { NoteService } from 'src/app/Services/noteService/note.service';
   styleUrls: ['./create-note.component.scss']
 })
 export class CreateNoteComponent implements OnInit {
+  @Input() childMessage: any;
   isShow=false;
   title:any;
   description:any;
@@ -28,7 +29,6 @@ export class CreateNoteComponent implements OnInit {
               description:this.description,colour:"white"}
     this.note.addNote(data).subscribe((result:any)=>{
       console.log(result);
-      // this.messageEvent.emit("result")
     })
 
             }

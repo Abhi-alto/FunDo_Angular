@@ -12,10 +12,12 @@ export class HttpService {
     console.log(reqdata);
     return this.httpclient.post(url, reqdata, token && httpOptions)
   }
-  putService()
+  putService(url:string, reqdata:any, token:boolean=false, httpOptions:any)
   {
-
+    console.log(reqdata);
+    return this.httpclient.post(url,reqdata,  token && httpOptions)
   }
+  
   getService(url:string, token:boolean=false, httpOptions:any)
   {
     return this.httpclient.get(url, token && httpOptions)

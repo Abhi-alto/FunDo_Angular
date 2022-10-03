@@ -1,19 +1,32 @@
 <div class="Outer">
     <div class="createNote">
         <div *ngIf="isShow">
-            <input class="Title" autocomplete="off" placeholder="Title"[(ngModel)]="title" role="combobox" value=""
+            <input class="ShowBox" autocomplete="off" placeholder="Title" [(ngModel)]="title" role="combobox" value=""
                 name="q" type="text">
-            <button mat-icon-button  aria-label="New List">
-                    <mat-icon href="S:/Abhishek's Project/AngularProject/FunDoNotes/src/assets/"></mat-icon>
-                  </button> 
         </div>
-        <div *ngIf="!isShow || isShow" (click)="show()">
-            <input class="TakeNote" autocomplete="off" placeholder="Take a Note"[(ngModel)]="description" role="combobox"
-                value="" name="q" type="text">
+        <div class="notShow" *ngIf="!isShow" (click)="show()">
+
+            <input class="TakeNote" autocomplete="off" placeholder="Take a Note ..." [(ngModel)]="description"
+                role="combobox" value="" name="q" type="text">
+            <div class="image">
+                  <button mat-icon-button  aria-label="Example icon button with a home icon">
+                    <mat-icon ><img src="../../../assets/check_box_FILL0_wght300_GRAD200_opsz24.svg"></mat-icon>
+                  </button>
+                  <button mat-icon-button  aria-label="Example icon button with a home icon">
+                      <mat-icon><img src="../../../assets/brush_FILL0_wght500_GRAD0_opsz24 (1).svg"></mat-icon>
+                   </button>
+                    <button mat-icon-button  aria-label="Example icon button with a home icon">
+                      <mat-icon ><img src="../../../assets/image_FILL0_wght400_GRAD0_opsz24.svg"></mat-icon>
+                    </button>
+            </div>
+        </div>
+        <div *ngIf="isShow" (click)="show()">
+            <input class="ShowBox" autocomplete="off" placeholder="Take a Note ..." [(ngModel)]="description"
+                role="combobox" value="" name="q" type="text">
         </div>
         <div class="boxicon" *ngIf="isShow">
             <app-icons></app-icons>
-            <button mat-button (click)="close()">Close</button>
+            <button mat-flat-button (click)="close()" >Close</button>
         </div>
     </div>
 </div>

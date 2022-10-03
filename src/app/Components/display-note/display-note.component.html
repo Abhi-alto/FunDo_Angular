@@ -1,7 +1,9 @@
-<div class="display" *ngFor="let note of childMessage">
-    <div class="outer">
-            <div>{{note.title}}</div>
-            <div>{{note.description}}</div>
-            <app-icons></app-icons>
+<div class="display">
+    <div class="outer" *ngFor="let note of childMessage">
+        <div class="text" (click)="openDialog(note)">
+            <div class="title">{{note.title}}</div>
+            <div class="description">{{note.description}}</div>
+        </div>
+        <app-icons></app-icons>
     </div>
 </div>

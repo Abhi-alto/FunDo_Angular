@@ -27,6 +27,7 @@ import { ArchiveComponent } from './Components/archive/archive.component';
 import { TrashComponent } from './Components/trash/trash.component';
 import { ReminderComponent } from './Components/reminder/reminder.component';
 import { EditLabelsComponent } from './Components/edit-labels/edit-labels.component';
+import { UpdateComponent } from './Components/update/update.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { EditLabelsComponent } from './Components/edit-labels/edit-labels.compon
     ArchiveComponent,
     TrashComponent,
     ReminderComponent,
-    EditLabelsComponent
+    EditLabelsComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

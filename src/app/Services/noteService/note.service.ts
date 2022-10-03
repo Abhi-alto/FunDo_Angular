@@ -33,5 +33,16 @@ export class NoteService {
     }
     return this.http.getService('https://localhost:44319/Note/GetAllNote', true, header)   
   }
+  updateNote(data:any)
+  {
+    console.log(this.token);
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.http.putService(`https://localhost:44319/Note/UpdateNote/${data.NoteID}`,data, true, header)  
+  }
 }
 

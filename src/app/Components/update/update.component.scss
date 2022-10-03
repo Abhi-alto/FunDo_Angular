@@ -1,0 +1,34 @@
+.Container
+{
+    height:20vh;
+}
+.bottom
+{
+    border:1px solid red;
+    display:flex;
+    width:460px;
+    justify-content: space-between;
+    padding-bottom: 0px;
+}
+.sub
+{
+    display: flex;
+    flex-direction: column;
+    border:1px solid white;
+}
+.update
+{
+    display: flex;
+    height:40px;
+    font-size: large;
+    width: 460px;
+    border:5px solid white;
+}
+.updates
+{
+    height:35px;
+    font-size: normal;
+     width:460px;
+    border:5px solid white;
+    padding-bottom: 20px;
+}
