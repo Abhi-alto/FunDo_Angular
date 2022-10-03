@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NoteService } from 'src/app/Services/noteService/note.service';
 
 @Component({
   selector: 'app-archive',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./archive.component.scss']
 })
 export class ArchiveComponent implements OnInit {
-
-  constructor() { }
+  //@Input() childMessage: any;
+  isArchive:any;
+  constructor(private note:NoteService) { }
 
   ngOnInit(): void {
   }
+
 
 }

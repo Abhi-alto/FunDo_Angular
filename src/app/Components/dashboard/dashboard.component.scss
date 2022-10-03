@@ -141,11 +141,8 @@
 {
   border: 0px;
 }
-.mobileQuery.matches
+
+.mat-list-item:hover
 {
-  background-color: orange;
-}
-.take
-{
-  background-color: orange;
+  background-color: rgb(255, 231, 206);
 }

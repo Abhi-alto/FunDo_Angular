@@ -24,11 +24,8 @@ export class UpdateComponent implements OnInit {
     this.description = this.data.description;
   }
 
-  onNoClick(): void {
-    this.dialogRef.close();
+  onClick(): void {
     let data={
-      UserId:this.data.UserId,
-      NoteID:this.data.NoteID,
       title:this.title,
       description:this.description,
       colour: "white",
@@ -38,7 +35,8 @@ export class UpdateComponent implements OnInit {
       isTrash: false,
       reminder: "2022-10-03T01:31:54.721Z"
     }
-    this.note.updateNote(data).subscribe((res:any)=> console.log(res))
+    this.dialogRef.close();
+    this.note.updateNote(data,this.data.noteID).subscribe((res:any)=> console.log(res))
   }
 }
 

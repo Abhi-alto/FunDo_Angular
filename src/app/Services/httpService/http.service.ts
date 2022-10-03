@@ -15,7 +15,7 @@ export class HttpService {
   putService(url:string, reqdata:any, token:boolean=false, httpOptions:any)
   {
     console.log(reqdata);
-    return this.httpclient.post(url,reqdata,  token && httpOptions)
+    return this.httpclient.put(url,reqdata,  token && httpOptions)
   }
   
   getService(url:string, token:boolean=false, httpOptions:any)
