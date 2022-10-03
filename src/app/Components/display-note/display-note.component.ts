@@ -9,6 +9,7 @@ import { UpdateComponent } from '../update/update.component';
   styleUrls: ['./display-note.component.scss']
 })
 export class DisplayNoteComponent implements OnInit {
+  notes:any;
   @Input() childMessage: any;
   constructor(private dialog: MatDialog) { }
 

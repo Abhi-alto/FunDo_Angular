@@ -44,7 +44,7 @@ export class NoteService {
     }
     return this.http.putService(`https://localhost:44319/Note/UpdateNote/${NoteID}`,data, true, header)  
   }
-  archiveNote(data:any, NoteID:any)
+  archiveNote(data:any,NoteID:any)
   {
     console.log(this.token);
     let header={

@@ -28,6 +28,7 @@ import { TrashComponent } from './Components/trash/trash.component';
 import { ReminderComponent } from './Components/reminder/reminder.component';
 import { EditLabelsComponent } from './Components/edit-labels/edit-labels.component';
 import { UpdateComponent } from './Components/update/update.component';
+import { AuthguardServiceService } from './Services/authService/authguard-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +64,9 @@ import { UpdateComponent } from './Components/update/update.component';
     MatButtonModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AuthguardServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

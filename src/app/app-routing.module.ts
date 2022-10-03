@@ -10,13 +10,15 @@ import { RegisterComponent } from './Components/register/register.component';
 import { ReminderComponent } from './Components/reminder/reminder.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { TrashComponent } from './Components/trash/trash.component';
+import { AuthenticationGuard } from './Guard/authentication.guard';
 
 const routes: Routes = [
+  { path: '', redirectTo: "/login", pathMatch: 'full' },
   {path:"signup",component:RegisterComponent},
   {path:"login",component:LoginComponent},
   {path:"forgetPassword",component:ForgotPasswordComponent},
   {path:"resetPassword",component:ResetPasswordComponent},
-  {path:'dashboard',component:DashboardComponent,
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],
     children:[
       {path:'notes',component:GetAllNotesComponent},
       {path:'reminder',component:ReminderComponent},

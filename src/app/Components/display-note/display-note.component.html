@@ -1,9 +1,11 @@
 <div class="display">
     <div class="outer" *ngFor="let note of childMessage">
+        <!-- <div *ngIf="!Archive"  > -->
         <div class="text" (click)="openDialog(note)">
             <div class="title">{{note.title}}</div>
             <div class="description">{{note.description}}</div>
         </div>
-        <app-icons></app-icons>
+        <app-icons [childMessage]="note"></app-icons>
+    <!-- </div> -->
     </div>
 </div>
