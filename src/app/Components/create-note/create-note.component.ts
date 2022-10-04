@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import {  EventEmitter } from '@angular/core';
 import { NoteService } from 'src/app/Services/noteService/note.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { NoteService } from 'src/app/Services/noteService/note.service';
 })
 export class CreateNoteComponent implements OnInit {
   @Input() childMessage: any;
+  @Output() messageEvent = new EventEmitter<any>();
   isShow=false;
   title:any;
   description:any;
@@ -29,8 +31,8 @@ export class CreateNoteComponent implements OnInit {
               description:this.description,colour:"white"}
     this.note.addNote(data).subscribe((result:any)=>{
       console.log(result);
+      this.messageEvent.emit(result);                           //message (entire data array) emitted to the get all notes(parent component) 
     })
-
             }
 
 

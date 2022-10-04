@@ -55,5 +55,27 @@ export class NoteService {
     }
     return this.http.putService(`https://localhost:44319/Note/Archive/${NoteID}`,data, true, header)
   }
+  reminderNote(NoteID:any)
+  {
+    console.log(this.token);
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.http.putService(`https://localhost:44319/Note/Reminder/${NoteID}`,"2022-01-01T00:00:00.000Z", true, header)
+  }
+  trashNote(data:any,NoteID:any)
+  {
+    console.log(this.token);
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+     return this.http.putService(`https://localhost:44319/Note/Trash/${NoteID}`,data, true, header)
+}
 }
 

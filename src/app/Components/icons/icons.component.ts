@@ -15,9 +15,19 @@ export class IconsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  Archive()
+  Archive() 
   {
     this.note.archiveNote(this.childMessage,this.childMessage.noteID).subscribe((res:any) => console.log(res))
+    console.log(this.childMessage);
+  }
+  Reminder()
+  {
+    this.note.reminderNote(this.childMessage.noteID).subscribe((res:any) => console.log(res))
+    console.log(this.childMessage);
+  }
+  Trash()
+  {
+    this.note.trashNote(this.childMessage,this.childMessage.noteID).subscribe((res:any) => console.log(res))
     console.log(this.childMessage);
   }
 }

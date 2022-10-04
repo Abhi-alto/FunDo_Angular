@@ -29,6 +29,7 @@ import { ReminderComponent } from './Components/reminder/reminder.component';
 import { EditLabelsComponent } from './Components/edit-labels/edit-labels.component';
 import { UpdateComponent } from './Components/update/update.component';
 import { AuthguardServiceService } from './Services/authService/authguard-service.service';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,7 @@ import { AuthguardServiceService } from './Services/authService/authguard-servic
     MatIconModule,
     MatSidenavModule,
     MatIconModule,
+    MatMenuModule,
     FormsModule,
     MatToolbarModule,
     MatDialogModule,

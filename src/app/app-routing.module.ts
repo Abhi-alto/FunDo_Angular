@@ -12,6 +12,7 @@ import { ResetPasswordComponent } from './Components/reset-password/reset-passwo
 import { TrashComponent } from './Components/trash/trash.component';
 import { AuthenticationGuard } from './Guard/authentication.guard';
 
+
 const routes: Routes = [
   { path: '', redirectTo: "/login", pathMatch: 'full' },
   {path:"signup",component:RegisterComponent},
