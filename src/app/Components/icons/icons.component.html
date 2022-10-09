@@ -13,32 +13,58 @@
 <body>
 
   <div class="icons">
-    <button mat-icon-button span class="material-symbols-outlined" (click)="Reminder()">
+    <button mat-icon-button span class="material-symbols-outlined" *ngIf="COMPONENT!=trash" (click)="Reminder()">
       add_alert
     </button>
-    <button mat-icon-button span class="material-symbols-outlined">
+    <button mat-icon-button span class="material-symbols-outlined" *ngIf="COMPONENT!=trash">
       person_add
     </button>
-    <button mat-icon-button span class="material-symbols-outlined">
-      palette
-    </button>
-    <button mat-icon-button span class="material-symbols-outlined">
+    <div>
+      <button mat-icon-button span class="material-symbols-outlined" [matMenuTriggerFor]="Menu"
+        *ngIf="COMPONENT!=trash">
+        palette
+      </button>
+      <mat-menu #Menu="matMenu" >
+        <div class="Palette">
+        <div class="Col"  *ngFor="let colour of palette"  >
+          <button class="ColourChoice" [style.Background]="colour.Background" (click)="ColourPalette(colour.Background)">
+          </button>
+        </div>
+      </div>
+      </mat-menu>
+    </div>
+    <button mat-icon-button span class="material-symbols-outlined" *ngIf="COMPONENT!=trash">
       image
     </button>
-    <button mat-icon-button span class="material-symbols-outlined" (click)="Archive()">archive
+
+    <!-- Archive and unarchive -->
+    <button mat-icon-button span class="material-symbols-outlined" *ngIf="COMPONENT!=archive "(click)="Archive() ">archive
+    </button>
+    <button mat-icon-button span class="material-symbols-outlined" *ngIf="COMPONENT == archive" (click)="Archive() ">unarchive
     </button>
     <div>
-      <button mat-icon-button span class="material-symbols-outlined" [matMenuTriggerFor]="menu">
+
+
+      <button mat-icon-button span class="material-symbols-outlined" [matMenuTriggerFor]="menu"
+        *ngIf="COMPONENT!=trash">
         more_vert
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item >
-          <span style="font-size:normal;"(click)="Trash()">Delete Note</span>
+        <button mat-menu-item>
+          <span style="font-size:normal;" (click)="Trash()">Delete Note</span>
         </button>
         <button mat-menu-item>
           <span style="font-size:normal;">Add Label</span>
         </button>
       </mat-menu>
+    </div>
+    <div class="TrashBox" *ngIf="COMPONENT==trash">
+      <button mat-icon-button span class="material-symbols-outlined" (click)="Delete()">
+        delete_forever
+      </button>
+      <button mat-icon-button span class="material-symbols-outlined" (click)="Trash()" alt="Restore">
+        restore_from_trash
+      </button>
     </div>
   </div>
 </body>

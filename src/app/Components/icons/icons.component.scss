@@ -15,3 +15,38 @@
     padding-left: 0px;;
     padding-bottom: 0px;
 }
+.TrashBox
+{
+  width:250px;
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+}
+.ColourChoice
+{
+  width:2vw;
+  height: 4vh;
+  border:100px;
+  border-radius: 50px 50px;
+}
+.ColourChoice:hover{
+  border:2px solid black;
+}
+.Col
+{
+  display:flex;
+  justify-content: center;
+  padding: 2px;
+}
+.Palette
+{
+  display:flex;
+  flex-wrap: wrap;
+  width: 10vw;
+
+}

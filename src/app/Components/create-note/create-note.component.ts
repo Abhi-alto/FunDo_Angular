@@ -23,8 +23,8 @@ export class CreateNoteComponent implements OnInit {
   {
     this.isShow=true;
   }
-  close()
-  {
+close()
+{
     this.isShow=false;
     console.log(this.title,this.description);
     let data={title:this.title,
@@ -32,8 +32,6 @@ export class CreateNoteComponent implements OnInit {
     this.note.addNote(data).subscribe((result:any)=>{
       console.log(result);
       this.messageEvent.emit(result);                           //message (entire data array) emitted to the get all notes(parent component) 
-    })
-            }
-
-
+  })
+}
 }

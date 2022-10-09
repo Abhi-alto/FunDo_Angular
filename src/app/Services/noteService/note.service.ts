@@ -76,6 +76,27 @@ export class NoteService {
       })
     }
      return this.http.putService(`https://localhost:44319/Note/Trash/${NoteID}`,data, true, header)
+  }
+  deleteNote(NoteID:any)
+  {
+    console.log(this.token);
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.http.deleteService(`https://localhost:44319/Note/DeleteNote/${NoteID}`, true, header)
+  }
+  Colours(data:any,NoteID:any)
+  {
+    console.log(this.token);
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+  }
+  return this.http.putService(`https://localhost:44319/Note/UpdateNoteColour/${NoteID}/${data.Colour}`,data, true, header)
 }
 }
-

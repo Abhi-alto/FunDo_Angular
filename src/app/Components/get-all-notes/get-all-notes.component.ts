@@ -17,17 +17,25 @@ export class GetAllNotesComponent implements OnInit {
   getNote()
   {
     this.note.getNote().subscribe((res:any)=>{
-      console.log(res);
+      //console.log(res);
       this.noteArray=res.noteList;
+      console.log(this.noteArray);
       this.noteArray = this.noteArray.filter((result:any) => {
-        return result.isTrash == false && result.isArchive==false  
+        return result.isTrash == false && result.isArchive ==false
       });
-      console.log(this.noteArray.noteList);
+      //console.log(this.noteArray);  
     })
   }
-  receiveMessage(event:any) {
+  receiveMessage(event:any)
+  {
     console.log(event);
     this.getNote();
   }
+  // receivedMessage(events:any)
+  //  {
+  //   console.log(events);
+  //   this.getNote();                     //called two times as it is reciving the old msg in this one 
+  //   this.getNote();                     //in this one it is refreshing
+  // }
 }
 

@@ -1,11 +1,12 @@
-<div class="display">
-    <div class="outer" *ngFor="let note of childMessage">
+<div class="display" >
+    <div class="outer"  *ngFor="let note of childMessage" [style.Background]="note.colour">
         <!-- <div *ngIf="!Archive"  > -->
-        <div class="text" (click)="openDialog(note)">
+        <div class="text" (click)="openDialog(note)" >
             <div class="title">{{note.title}}</div>
             <div class="description">{{note.description}}</div>
         </div>
-        <app-icons [childMessage]="note"></app-icons>
+        <app-icons  [childMessage]="note"  (messageEvent)="receiveMessage($event)" ></app-icons>
     <!-- </div> -->
     </div>
 </div>
+<!-- (click)="sendmsg()" -->
