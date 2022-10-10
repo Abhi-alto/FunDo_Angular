@@ -53,17 +53,17 @@ export class IconsComponent implements OnInit {
     console.log(this.childMessage);
   }
     palette: any = [
-    { "Background": "#FF0000" },
+    { "Background": "Red" },
     {"Background": "Green" },
-    {  "Background": "#0000FF" },
-    {  "Background": "#FFA500" },
-    {  "Background": "#FFFF00" },
-    {  "Background": "#800000" },
-    { "Background": "#000000" },
-    {  "Background": "#808080" },
-    {  "Background": "#FFFFFF" },
-    {  "Background": "	#FFC0CB" },
-    {  "Background": "#EE82EE" },
+    {  "Background": "Blue" },
+    {  "Background": "Orange" },
+    {  "Background": "Yellow" },
+    {  "Background": "Maroon" },
+    { "Background": "Black" },
+    {  "Background": "Grey" },
+    {  "Background": "White" },
+    {  "Background": "LightPink" },
+    {  "Background": "Pink" },
     {  "Background": "#FFD700" } 
   ];
   ColourPalette(choice:any)
@@ -72,7 +72,7 @@ export class IconsComponent implements OnInit {
       console.log(choice);
       let data ={
         NoteID: this.childMessage.noteID,
-        colour: choice
+        Colour: choice
       }
       this.note.Colours(data,data.NoteID).subscribe((res:any)=>{
         console.log(res.colour);

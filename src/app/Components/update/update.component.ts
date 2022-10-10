@@ -12,6 +12,7 @@ import { NoteService } from 'src/app/Services/noteService/note.service';
 export class UpdateComponent implements OnInit {
   title: any;
   description: any;
+  colour:any;
 
   constructor(
     private note: NoteService,
@@ -22,13 +23,14 @@ export class UpdateComponent implements OnInit {
     console.log(this.data);
     this.title = this.data.title;
     this.description = this.data.description;
+    this.colour=this.data.colour;
   }
 
   onClick(): void {
     let data={
       title:this.title,
       description:this.description,
-      colour: "white",
+      colour: this.colour,
       isPin: false,
       isReminder:false,
       isArchive: false,
@@ -37,6 +39,12 @@ export class UpdateComponent implements OnInit {
     }
     this.dialogRef.close();
     this.note.updateNote(data,this.data.noteID).subscribe((res:any)=> console.log(res))
+  }
+  message:any;
+  receiveMessage(event:any) {
+    console.log(event.color)
+    this.message = event
+    console.log(this.message)
   }
 }
 

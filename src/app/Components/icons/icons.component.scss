@@ -1,3 +1,11 @@
+.icons
+{
+    display: flex;
+    justify-content: space-between;
+    padding-top:10px;
+    padding-left: 0px;;
+    padding-bottom: 0px;
+}
 
 .material-symbols-outlined {
     
@@ -7,14 +15,6 @@
     'GRAD' 0,
     'opsz' 20
   }
-.icons
-{
-    display: flex;
-    justify-content: space-between;
-    padding-top:10px;
-    padding-left: 0px;;
-    padding-bottom: 0px;
-}
 .TrashBox
 {
   width:250px;

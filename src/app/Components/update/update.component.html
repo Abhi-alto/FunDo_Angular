@@ -1,10 +1,11 @@
-<div class="container">
-    <div class="sub">
-        <input class="update" autocomplete="off" role="combobox" placeholder="{{title}}" [(ngModel)]="title" type="text">
+<div class="container" [style.Background]="colour">
+    <div class="sub" >
+        <input class="update" autocomplete="off" role="combobox"  placeholder="{{title}}" [(ngModel)]="title" type="text" >
         <input class="updates" autocomplete="off" placeholder="{{description}}" [(ngModel)]="description" type="text">
     </div>
     <div class="bottom">
-        <app-icons></app-icons>
+        <app-icons [childMessage]="data" (messageEvent)="receiveMessage($event)"></app-icons>
         <button mat-flat-button (click)="onClick()">Close</button>
     </div>
 </div>
+<!-- [style.Background]="colour" -->

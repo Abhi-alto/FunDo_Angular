@@ -30,4 +30,9 @@ export class ArchiveComponent implements OnInit {
       console.log(this.noteArray);
     })
   }
+  receiveMessage(event:any)
+  {
+    console.log(event) ;
+    this.ArchiveNote();
+  }
 }
