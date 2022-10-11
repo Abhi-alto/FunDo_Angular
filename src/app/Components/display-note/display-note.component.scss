@@ -1,16 +1,20 @@
+
 .display
 {
     display: flex;
+    justify-content: flex-start;
+    width: 80vw;
     flex-wrap: wrap;
-    
+    //border:1px solid black;
+    //margin: 20px 15px 0px 20px;
+    margin-left: 30px;
 }
 .outer
-{
-    justify-content: left;
+{   
     border:1px solid rgb(205, 202, 202);
     padding:10px;
     border-radius: 5px;
-    margin:20px;
+    margin:15px;
 }
 .text
 {
@@ -25,7 +29,6 @@
 }
 .description
 {
-
     font-weight: normal;
 }
 .outer:hover
@@ -33,3 +36,4 @@
     background-color: rgb(255, 255, 255);
     box-shadow:1px 1px 6px 0.8px grey;
 }
+

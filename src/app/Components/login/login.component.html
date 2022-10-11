@@ -42,7 +42,9 @@
                     <a mat-button routerLink="/signup" self="_blank">Create Account</a>
                 </div>
                 <div class="Next">
-                    <button mat-flat-button >Next</button>
+                    <button mat-flat-button  (click)="snackBar('Login sucessfull', 'Close')">
+                        submit
+                    </button>
                 </div>
             </div>
         </form>

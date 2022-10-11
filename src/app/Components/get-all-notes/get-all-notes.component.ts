@@ -17,13 +17,11 @@ export class GetAllNotesComponent implements OnInit {
   getNote()
   {
     this.note.getNote().subscribe((res:any)=>{
-      //console.log(res);
       this.noteArray=res.noteList;
       console.log(this.noteArray);
       this.noteArray = this.noteArray.filter((result:any) => {
         return result.isTrash == false && result.isArchive ==false
       });
-      //console.log(this.noteArray);  
     })
   }
   receiveMessage(event:any)

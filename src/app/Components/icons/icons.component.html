@@ -27,7 +27,7 @@
       <mat-menu #Menu="matMenu" >
         <div class="Palette">
         <div class="Col"  *ngFor="let colour of palette"  >
-          <button class="ColourChoice" [style.Background]="colour.Background" (click)="ColourPalette(colour.Background)">
+          <button class="ColourChoice" [style.Background]="colour.Background" (click)="ColourPalette(colour.Background)" (click)="snackBarPalette('Colour updated', 'Close')">
           </button>
         </div>
       </div>
@@ -38,9 +38,9 @@
     </button>
 
     <!-- Archive and unarchive -->
-    <button mat-icon-button span class="material-symbols-outlined" *ngIf="COMPONENT!=archive "(click)="Archive() ">archive
+    <button mat-icon-button span class="material-symbols-outlined" *ngIf="COMPONENT!=archive && COMPONENT!=trash" (click)="Archive(); snack('Note Archived','Close');" >archive
     </button>
-    <button mat-icon-button span class="material-symbols-outlined" *ngIf="COMPONENT == archive" (click)="Archive() ">unarchive
+    <button mat-icon-button span class="material-symbols-outlined" *ngIf="COMPONENT == archive && COMPONENT!=trash" (click)="Archive(); snack('Note Unarchived','Close'); ">unarchive
     </button>
     <div>
 
@@ -51,7 +51,7 @@
       </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>
-          <span style="font-size:normal;" (click)="Trash()">Delete Note</span>
+          <span style="font-size:normal;" (click)="Trash(); snack('Note Trashed','Close');">Delete Note</span>
         </button>
         <button mat-menu-item>
           <span style="font-size:normal;">Add Label</span>
@@ -59,10 +59,10 @@
       </mat-menu>
     </div>
     <div class="TrashBox" *ngIf="COMPONENT==trash">
-      <button mat-icon-button span class="material-symbols-outlined" (click)="Delete()">
+      <button mat-icon-button span class="material-symbols-outlined" (click)="Delete(); snack('Note Deleted','Close');">
         delete_forever
       </button>
-      <button mat-icon-button span class="material-symbols-outlined" (click)="Trash()" alt="Restore">
+      <button mat-icon-button span class="material-symbols-outlined" (click)="Trash(); snack('Note Restored','Close');" alt="Restore">
         restore_from_trash
       </button>
     </div>

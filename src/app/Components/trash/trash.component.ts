@@ -17,9 +17,7 @@ export class TrashComponent implements OnInit {
     //  if(this.data.noteID==NoteID)
     this.note.getNote().subscribe((res: any) => {
       console.log(res.noteList);
-
       this.noteArray = res.noteList;
-
       this.noteArray = this.noteArray.filter((result: any) => {
         return result.isTrash == true;
       });

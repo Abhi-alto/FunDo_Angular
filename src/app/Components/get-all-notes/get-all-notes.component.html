@@ -2,7 +2,5 @@
 
     <app-create-note (messageEvent)="receiveMessage($event)"></app-create-note>
 
-    <div class="displayNote">
-        <app-display-note (messageEvent)="receiveMessage($event)" [childMessage]="noteArray"></app-display-note>
-    </div>
+    <app-display-note (messageEvent)="receiveMessage($event)" [childMessage]="noteArray"></app-display-note>
 </div>

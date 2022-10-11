@@ -10,6 +10,7 @@ import { NoteService } from 'src/app/Services/noteService/note.service';
   styleUrls: ['./update.component.scss']
 })
 export class UpdateComponent implements OnInit {
+  
   title: any;
   description: any;
   colour:any;
@@ -27,6 +28,7 @@ export class UpdateComponent implements OnInit {
   }
 
   onClick(): void {
+    this.dialogRef.close();
     let data={
       title:this.title,
       description:this.description,
@@ -35,16 +37,16 @@ export class UpdateComponent implements OnInit {
       isReminder:false,
       isArchive: false,
       isTrash: false,
+      NoteID:this.data.noteID,
       reminder: "2022-10-03T01:31:54.721Z"
     }
-    this.dialogRef.close();
+    // console.log(this.data.noteID);
     this.note.updateNote(data,this.data.noteID).subscribe((res:any)=> console.log(res))
   }
-  message:any;
-  receiveMessage(event:any) {
+  receiveMessage(event:any) 
+  {
     console.log(event.color)
-    this.message = event
-    console.log(this.message)
+    console.log(event)
   }
 }
 

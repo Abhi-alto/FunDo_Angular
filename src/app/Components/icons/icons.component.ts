@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NoteService } from 'src/app/Services/noteService/note.service';
-
+import {MatSnackBar} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-icons',
   templateUrl: './icons.component.html',
@@ -11,6 +11,7 @@ export class IconsComponent implements OnInit {
   @Input() childMessage: any;
   @Output() messageEvent = new EventEmitter<any>();
   @Output() newEvent = new EventEmitter<any>();
+
   //isArchive:any='fasle'
   // title:any;
   // description:any;
@@ -21,7 +22,7 @@ export class IconsComponent implements OnInit {
   trash: any = "TrashComponent";
   notes:any ="GetAllNotesComponent";
   
-  constructor(private note:NoteService,private route : ActivatedRoute) { }
+  constructor(private _snackBar: MatSnackBar,private note:NoteService,private route : ActivatedRoute) { }
 
   ngOnInit(): void {
     this.comp = this.route.snapshot.component
@@ -91,6 +92,14 @@ export class IconsComponent implements OnInit {
       console.log(res);
       //this.messageEvent.emit(res);
     })
+  }
+  snackBarPalette(msg:any, action:any)
+  {
+    this._snackBar.open(msg, action);
+  }
+  snack(msg:any, action:any)
+  {
+    this._snackBar.open(msg, action);
   }
 }
 

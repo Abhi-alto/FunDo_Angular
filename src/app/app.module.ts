@@ -12,9 +12,11 @@ import {MatButtonModule} from '@angular/material/button';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './Components/forgot-password/forgot-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatMenuModule} from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { CreateNoteComponent } from './Components/create-note/create-note.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 import { DisplayNoteComponent } from './Components/display-note/display-note.component';
 import { IconsComponent } from './Components/icons/icons.component';
@@ -29,7 +31,6 @@ import { ReminderComponent } from './Components/reminder/reminder.component';
 import { EditLabelsComponent } from './Components/edit-labels/edit-labels.component';
 import { UpdateComponent } from './Components/update/update.component';
 import { AuthguardServiceService } from './Services/authService/authguard-service.service';
-import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import {MatMenuModule} from '@angular/material/menu';
     TrashComponent,
     ReminderComponent,
     EditLabelsComponent,
-    UpdateComponent
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +61,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatMenuModule,
     FormsModule,
     MatToolbarModule,
+    MatSnackBarModule,
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
@@ -68,7 +70,8 @@ import {MatMenuModule} from '@angular/material/menu';
     HttpClientModule
   ],
   providers: [
-    AuthguardServiceService
+    AuthguardServiceService,
+//    MatSnackBarModule
   ],
   bootstrap: [AppComponent]
 })
